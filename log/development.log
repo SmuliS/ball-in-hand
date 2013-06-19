@@ -1,0 +1,127 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (92.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (15.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.9ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreatePlayers (20130619175234)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (366.6ms)[0m  [1mCREATE TABLE "players" ("id" serial primary key, "name" character varying(255), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20130619175234')
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.7ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2013-06-19 20:52:59 +0300
+Served asset /rails.png - 304 Not Modified (16ms)
+
+
+Started GET "/players" for 127.0.0.1 at 2013-06-19 20:53:04 +0300
+Processing by PlayersController#index as HTML
+  [1m[36mPlayer Load (0.6ms)[0m  [1mSELECT "players".* FROM "players" [0m
+  Rendered players/index.html.erb within layouts/application (19.2ms)
+Compiled players.css  (77ms)  (pid 63891)
+Compiled scaffolds.css  (16ms)  (pid 63891)
+Compiled application.css  (105ms)  (pid 63891)
+Compiled jquery.js  (5ms)  (pid 63891)
+Compiled jquery_ujs.js  (1ms)  (pid 63891)
+Compiled players.js  (547ms)  (pid 63891)
+Compiled application.js  (653ms)  (pid 63891)
+Completed 200 OK in 934ms (Views: 874.7ms | ActiveRecord: 19.4ms)
+
+
+Started GET "/assets/players.js?body=1" for 127.0.0.1 at 2013-06-19 20:53:05 +0300
+Served asset /players.js - 200 OK (15ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-19 20:53:05 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-19 20:53:05 +0300
+Served asset /scaffolds.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-06-19 20:53:05 +0300
+Served asset /application.js - 200 OK (63ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-06-19 20:53:05 +0300
+Served asset /application.css - 200 OK (16ms)
+
+
+Started GET "/assets/players.css?body=1" for 127.0.0.1 at 2013-06-19 20:53:06 +0300
+Served asset /players.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-19 20:53:06 +0300
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/players/new" for 127.0.0.1 at 2013-06-19 20:53:09 +0300
+Processing by PlayersController#new as HTML
+  Rendered players/_form.html.erb (41.0ms)
+  Rendered players/new.html.erb within layouts/application (57.7ms)
+Completed 200 OK in 80ms (Views: 73.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-19 20:53:09 +0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-19 20:53:09 +0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-19 20:53:09 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/players.css?body=1" for 127.0.0.1 at 2013-06-19 20:53:09 +0300
+Served asset /players.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/players.js?body=1" for 127.0.0.1 at 2013-06-19 20:53:09 +0300
+Served asset /players.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-19 20:53:09 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started POST "/players" for 127.0.0.1 at 2013-06-19 20:53:13 +0300
+Processing by PlayersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mmARkqN2bSOSGc11W52Otf+MDvN6gZ5od5xtbKeXB0E=", "player"=>{"name"=>"Testi"}, "commit"=>"Create Player"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (77.8ms)[0m  [1mINSERT INTO "players" ("created_at", "name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", Wed, 19 Jun 2013 17:53:13 UTC +00:00], ["name", "Testi"], ["updated_at", Wed, 19 Jun 2013 17:53:13 UTC +00:00]]
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/players/1
+Completed 302 Found in 85ms (ActiveRecord: 79.1ms)
+
+
+Started GET "/players/1" for 127.0.0.1 at 2013-06-19 20:53:13 +0300
+Processing by PlayersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPlayer Load (1.3ms)[0m  [1mSELECT "players".* FROM "players" WHERE "players"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered players/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 22ms (Views: 16.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/players.css?body=1" for 127.0.0.1 at 2013-06-19 20:53:13 +0300
+Served asset /players.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/players.js?body=1" for 127.0.0.1 at 2013-06-19 20:53:13 +0300
+Served asset /players.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-06-19 20:53:13 +0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2013-06-19 20:53:13 +0300
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-06-19 20:53:13 +0300
+Served asset /jquery.js - 304 Not Modified (0ms)
