@@ -1,0 +1,16 @@
+common: &common
+  adapter: postgresql
+
+development:
+  <<: *common
+  host: localhost
+  database: ball-in-hand-development
+
+test:
+  <<: *common
+  host: localhost
+  database: ball-in-hand-test
+
+production:
+  <<: *common
+  database: ball-in-hand-production
