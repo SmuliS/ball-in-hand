@@ -11,9 +11,11 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
-//= require jquery_ujs
 //= require jquery.ui.all
 //= require foundation
+//= require hogan.js
+//= require lodash
+//= require backbone
 //= require_tree .
 
 $(function(){ $(document).foundation(); });
