@@ -1,10 +1,11 @@
 BallInHand::Application.routes.draw do
+  root :to => 'games#index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
   resources :players
   resources :games
-  root :to => 'games#index'
+  
 
 
   # The priority is based upon order of creation:
