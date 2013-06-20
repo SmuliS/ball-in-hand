@@ -5,7 +5,6 @@ window.Views = ->
 class Views.Main extends Backbone.View
 
 	render: ->
-		debugger
 		@$el = HoganTemplates['app/templates/main'].render name: "World"
 		@
 
