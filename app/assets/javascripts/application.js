@@ -16,6 +16,7 @@
 //= require hogan.js
 //= require lodash
 //= require backbone
+//= require app
 //= require_tree .
 
 $(function(){ $(document).foundation(); });

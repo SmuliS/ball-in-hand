@@ -1,11 +1,23 @@
-window.Views = ->
-	mainView = new Views.Main
-	$('.container').append mainView.render().$el
-
 class Views.Main extends Backbone.View
+	# Backbone
+	events:
+		'click #play': 'play'
 
 	render: ->
-		@$el = HoganTemplates['app/templates/main'].render name: "World"
+		@$el.html HoganTemplates['app/templates/main'].render name: "World"
 		@
 
-Views()
+	# Actions
+	hide: ->
+		@$('.content').hide()
+
+	show: ->
+		@$('.content').show()
+
+	play: ->
+		gameView = new Views.Game
+		@subView gameView.render()
+		@hide()
+
+	subView: (view) ->
+		@$('#main-view').append view.$el

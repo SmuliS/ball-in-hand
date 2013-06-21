@@ -1,0 +1,8 @@
+.row
+	.large-12.columns.text-center
+		%button.large.button.expand#back Back
+		%form
+			%input#player-a{:type => "text", :placeholder => "Player name..."}/  		
+			.large-12.columns.text-center
+				%h1 VS
+			%input#player-b{:type => "text", :placeholder => "Player name..."}/ 
