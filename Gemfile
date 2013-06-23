@@ -35,6 +35,7 @@ group :development, :test do
   gem 'database_cleaner'
   gem 'guard-rspec'
   gem 'terminal-notifier-guard'
+  gem 'faker'
 end
 
 # To use ActiveModel has_secure_password
