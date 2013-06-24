@@ -3,7 +3,7 @@ class Views.Main extends Backbone.View
 		"click #play": "play"
 
 	render: ->
-		@$el.html HoganTemplates['app/templates/main_view'].render()
+		@$el.html HoganTemplates['app/templates/main'].render()
 		@
 
 	play: ->
