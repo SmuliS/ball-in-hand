@@ -9,6 +9,5 @@ class Views.Game extends Backbone.View
 
 	# Actions
 	back: ->
-		@.remove()
-		mainView.show()
+		@navigationController.popView()
 

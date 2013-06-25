@@ -1,6 +1,7 @@
 window.Views = ->
-	window.mainView = new Views.Main
-	$('.container').append mainView.render().$el
+	navigationController = new Views.NavigationController
+	$('.container').append navigationController.render().$el
+	navigationController.pushView (new Views.Main)
 
 
 $(document).ready ->
