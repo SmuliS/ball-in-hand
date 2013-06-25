@@ -1,5 +1,4 @@
 .row
-	.large-12.columns.text-center#main-view
-		.content
-			%button.large.button.expand#play Play
+	.large-12.columns.text-center
+		%button.large.button.expand#play Play
 
