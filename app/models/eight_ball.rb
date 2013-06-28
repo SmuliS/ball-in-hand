@@ -1,0 +1,2 @@
+class EightBall < Game
+end
