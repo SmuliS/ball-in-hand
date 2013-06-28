@@ -56,7 +56,14 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.6.2)
+    columnize (0.3.6)
     database_cleaner (1.0.1)
+    debugger (1.6.0)
+      columnize (>= 0.3.1)
+      debugger-linecache (~> 1.2.0)
+      debugger-ruby_core_source (~> 1.2.1)
+    debugger-linecache (1.2.0)
+    debugger-ruby_core_source (1.2.2)
     devise (2.2.4)
       bcrypt-ruby (~> 3.0)
       orm_adapter (~> 0.1)
@@ -72,6 +79,8 @@ GEM
     factory_girl_rails (4.2.1)
       factory_girl (~> 4.2.0)
       railties (>= 3.0.0)
+    faker (1.1.2)
+      i18n (~> 0.5)
     fastercsv (1.5.5)
     ffi (1.9.0)
     formatador (0.2.4)
@@ -215,14 +224,17 @@ DEPENDENCIES
   activeadmin
   coffee-rails (~> 3.2.1)
   database_cleaner
+  debugger
   elo
   factory_girl_rails
+  faker
   guard
   guard-rspec
   haml
   hogan_assets
   jquery-rails (= 2.3.0)
   jquery-ui-rails
+  multi_json
   pg
   rails (= 3.2.13)
   rspec-rails (~> 2.0)

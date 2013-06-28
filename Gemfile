@@ -8,6 +8,7 @@ gem 'pg'
 gem 'elo'
 gem 'haml'
 gem "activeadmin"
+gem "multi_json"
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -34,6 +35,7 @@ group :development, :test do
   gem 'rspec-rails', '~> 2.0'
   gem 'database_cleaner'
   gem 'guard-rspec'
+  gem 'faker'
   gem 'terminal-notifier-guard'
 end
 
@@ -50,4 +52,4 @@ end
 # gem 'capistrano'
 
 # To use debugger
-# gem 'debugger'
+gem 'debugger'
