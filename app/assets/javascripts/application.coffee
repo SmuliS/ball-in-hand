@@ -12,9 +12,6 @@
 #
 #= require jquery
 #= require foundation
-#= require hogan.js
-#= require libs/lodash
-#= require libs/backbone
 #= require_tree .
 
 $ ->
