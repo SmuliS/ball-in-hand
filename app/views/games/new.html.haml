@@ -1,1 +1,31 @@
-%h1 New Game
+.row
+  .small-2.large-12.columns.center
+    %h4 New Game
+= form_tag("/games")
+.row
+  .small-2.large-4.columns.center
+    %h4 Winner
+    =select_tag "winner", options_from_collection_for_select(@players, "id", "name")
+
+  .small-2.large-4.columns.center
+    %h2 VS.
+  .small-2.large-4.columns.center
+    %h4 Loser
+    =select_tag "loser", options_from_collection_for_select(@players, "id", "name")
+
+.row.game-type
+  .small-2.large-12.columns.center
+    %h4 Gametype
+    %select.winner{style: "width: 25%"}
+      %option Eightball
+
+.row.meta-fields
+  .small-2.large-12.columns.center
+    %h4 Rendataan metaa Gametypen mukaa
+    %input{type: "text"}
+
+.row.submit-button
+  .small-2.large-12.columns.center
+    = submit_tag "Create game record"
+
+
