@@ -28,5 +28,12 @@ describe Game do
         Game.record "EightBall", p1, p2
       }.to change{p1.reload.games_played}.by(1)
     end
+
+    it "should create correct result data" do
+      Game.record "EightBall", p1, p2
+
+      p1.results.last.won.should be_true
+      p2.results.last.won.should be_false
+    end
   end
 end

@@ -19,6 +19,6 @@ class Game < ActiveRecord::Base
     elo_winner.wins_from elo_loser
 
     Result.create player: winner, won: true, rating_after: elo_winner.rating, game: game
-    Result.create player: loser, won: true, rating_after: elo_loser.rating, game: game
+    Result.create player: loser, won: false, rating_after: elo_loser.rating, game: game
   end
 end
