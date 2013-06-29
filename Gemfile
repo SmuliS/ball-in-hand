@@ -36,6 +36,8 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'faker'
   gem 'terminal-notifier-guard'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 gem 'quiet_assets', :group => :development
