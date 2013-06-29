@@ -1,7 +1,10 @@
 .row
-  .small-2.large-12.columns
+  .large-6.columns
+    .new-player.center
+      =link_to 'Add a player', new_player_path, class: ['button', 'primary']
+  .large-6.columns
     .new-game.center
-      =link_to 'New Game', new_game_path, class: 'button', style: "width:70%"
+      =link_to 'New Game', new_game_path, class: ['button', 'primary']
 .row
   .small-2.large-12.columns
     .rating-table.center
@@ -21,4 +24,3 @@
                 %a{href: "players/#{player.id}"}= player.name
               %td= player.rating
               %td= player.games_played
-

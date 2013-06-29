@@ -1,21 +1,23 @@
 .row
-  %h1= @player.name
+  .large-12.columns
+    %h1= @player.name
 
 .row
-  %table
-    %thead
-      %tr
-        %th Opponent
-        %th Result
-        %th New Ranking
-        %th Played at
-    %tbody
-      - @player.results.each do |result|
+  .large-12.columns
+    %table
+      %thead
         %tr
-          %td= result.opponent.name
-          - if result.won
-            %td Won
-          - else
-            %td Lost
-          %td= result.rating_after
-          %td= result.created_at.localtime.strftime("%c")
+          %th Opponent
+          %th Result
+          %th New Ranking
+          %th Played at
+      %tbody
+        - @player.results.each do |result|
+          %tr
+            %td= result.opponent.name
+            - if result.won
+              %td Won
+            - else
+              %td Lost
+            %td= result.rating_after
+            %td= result.created_at.localtime.strftime("%c")
