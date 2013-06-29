@@ -9,6 +9,7 @@ gem 'elo'
 gem 'haml'
 gem "activeadmin"
 gem "multi_json"
+gem 'chosen-rails'
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

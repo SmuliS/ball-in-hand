@@ -13,6 +13,11 @@
 #= require jquery
 #= require foundation
 #= require_tree .
+#= require chosen-jquery
 
 $ ->
   $(document).foundation()
+  $('.chzn-select-player').chosen
+  	no_results_text: 'No players found.'
+  $('.chzn-select-gametype').chosen
+  	no_results_text: "Doesn't match any gametype."
