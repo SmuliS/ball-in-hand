@@ -14,6 +14,7 @@ class PlayersController < ApplicationController
   # GET /players/1.json
   def show
     @player = Player.find(params[:id])
+    @results = @player.results.sort_by(&:created_at)
   end
 
   # GET /players/new

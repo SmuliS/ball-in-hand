@@ -21,3 +21,24 @@
               %td Lost
             %td= result.rating_after
             %td= result.created_at.localtime.strftime("%c")
+          %td= result.opponent.name
+          - if result.won
+            %td Won
+          - else
+            %td Lost
+          %td= result.rating_after
+          %td= result.created_at.localtime.strftime("%c")
+
+.row
+  #data{style: "display: none"}
+    .ratings #{@results.map(&:rating_after).to_json}
+  #rating-chart{style: "margin-bottom: 50px;"}
+
+:coffee
+  $ ->
+    ratings = JSON.parse($("#data .ratings").text())
+    xAxis = [1..ratings.length]
+    r = Raphael("rating-chart")
+    console.log xAxis
+    r.linechart(30,0,800,300, xAxis, ratings, smooth: true, symbol: 'circle', axis: '0 0 1 1')
+
