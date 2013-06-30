@@ -15,7 +15,13 @@ class GamesController < ApplicationController
     winner = Player.find(winner)
     loser = Player.find(loser)
 
-    Game.record game_type, winner, loser
-    redirect_to "/" # TODO: RETURN 200 AND SOME FANCY JSON FOR BACKBONE
+    if winner != loser
+      Game.record game_type, winner, loser
+      redirect_to "/" # TODO: RETURN 200 AND SOME FANCY JSON FOR BACKBONE
+    else
+      # TODO: Error message
+      @players = Player.all
+      render :new
+    end
   end
 end

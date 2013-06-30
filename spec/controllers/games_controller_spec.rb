@@ -27,5 +27,11 @@ describe GamesController do
 
       response.should redirect_to("/")
     end
+
+    it "should render new if winner and loser are same" do
+      post :create, winner: p1.id, loser: p1.id, game_type: "EightBall"
+
+      response.should render_template :new
+    end
   end
 end
