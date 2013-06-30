@@ -14,6 +14,9 @@
 #= require foundation
 #= require_tree .
 #= require chosen-jquery
+#= require raphael/raphael-min
+#= require raphael/g.raphael-min
+#= require raphael/g.line-min
 
 $ ->
   $(document).foundation()
