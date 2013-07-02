@@ -56,4 +56,4 @@ gem 'quiet_assets', :group => :development
 # gem 'capistrano'
 
 # To use debugger
-gem 'debugger'
+gem 'debugger', :group => :development
