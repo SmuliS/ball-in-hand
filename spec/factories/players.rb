@@ -3,5 +3,6 @@
 FactoryGirl.define do
   factory :player do
     name {Faker::Name.name}
+    secret_key {Faker::Lorem.characters 10}
   end
 end
