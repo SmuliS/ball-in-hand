@@ -6,12 +6,17 @@
   .small-2.large-4.columns.center
     %h4 Winner
     =select_tag "winner", options_from_collection_for_select(@players, "id", "name"), {:class => 'chzn-select-player', "data-placeholder" => 'Choose a player'}
+    %h5 Secret
+    =password_field_tag "winner_secret_key"
+
 
   .small-2.large-4.columns.center
     %h2 VS.
   .small-2.large-4.columns.center
     %h4 Loser
     =select_tag "loser", options_from_collection_for_select(@players, "id", "name"), {:class => 'chzn-select-player', "data-placeholder" => 'Choose a player'}
+    %h5 Secret
+    =password_field_tag "loser_secret_key"
 
 .row.game-type
   .small-2.large-12.columns.center
